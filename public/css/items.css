@@ -1,0 +1,42 @@
+div.padding-bottom15 {
+        padding-bottom: 15px;
+}
+
+table.table-border {
+        border: 1px solid #ccc;
+}
+
+.required {
+        color: #B94A48;
+}
+
+.form-horizontal .form-group {
+        margin-left: 0px;
+        margin-right: 0px;
+}
+
+.select2-container {
+        width: 100% !important;
+        padding: 0;
+}
+
+.select2-container .select2-choice {
+        height: 32px;
+}
+
+.txt-error {
+        border: 1px solid #E9322D !important;
+        box-shadow: 0 0 6px #F8B9B7 !important;
+}
+
+.error-box {
+        display: none;
+}
+
+.display-block {
+        display: block;
+}
+
+.display-none {
+        display: none;
+}
