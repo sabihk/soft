@@ -33,7 +33,7 @@
 						</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody class="cursor">
 				</tbody>
 			</table>
 		</div>

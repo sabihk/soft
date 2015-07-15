@@ -40,3 +40,7 @@ table.table-border {
 .display-none {
         display: none;
 }
+
+.cursor {
+        cursor: pointer;
+}
