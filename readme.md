@@ -27,15 +27,15 @@ Code Architecture/Design
 
 2) Following are the files added for this application:
 
-    i) resources/views/app.blade.php                -> Header and and all the css & js files are included here.
+    i)  resources/views/app.blade.php                -> Header and and all the css & js files are included here.
     ii) resources/views/items.blade.php             -> Default page which display items details.
     iii) resources/views/itemDetails.blade.php      -> Add / Edit view file. (This file is used as content in modal)
     iv) app/Http/Controllers/ItemController.php     -> All the logics of this applicaiton are written in this controller.
-    v) app/Models/Item.php                          -> All the business logic of this application are written in this model.
+    v)  app/Models/Item.php                          -> All the business logic of this application are written in this model.
     vi) public/scripts/items.js                     -> All the jQuery codes for this application are added in this file.
     vii) public/css/items.css                       -> All the stylings for this application are added in this file.
     
 3) Plugins used:
     
-    i) public/plugins/datatables    -> Datatables plugin is used to display items list.
+    i)  public/plugins/datatables    -> Datatables plugin is used to display items list.
     ii) public/plugins/select2      -> Select2 plugin is used to display items in tax dropdown.
