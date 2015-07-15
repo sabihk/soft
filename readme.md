@@ -19,7 +19,7 @@ Application Architecture
 
 3) Edit Item    -> Click on the row to edit data, a modal with the item details will be displayed to edit and save.
 
-4) Delete Item  -> Not impleted.
+4) Delete Item  -> Not implemented.
 
 Code Architecture/Design
 ---------------------------
@@ -35,6 +35,7 @@ Code Architecture/Design
     vi) public/scripts/items.js                     -> All the jQuery codes for this application are added in this file.
     vii) public/css/items.css                       -> All the stylings for this application are added in this file.
     
-3) Plugins:
+3) Plugins used:
+    
     i) public/plugins/datatables    -> Datatables plugin is used to display items list.
     ii) public/plugins/select2      -> Select2 plugin is used to display items in tax dropdown.
