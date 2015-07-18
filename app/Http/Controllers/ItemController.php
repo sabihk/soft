@@ -54,7 +54,7 @@ class ItemController extends Controller
         }
     
         /**
-         * Save new item
+         * Save & Update item
          *
          * @return json
          */
@@ -102,6 +102,40 @@ class ItemController extends Controller
 			}
                 }
         }
+	
+	/**
+         * Delete items
+         *
+         * @return json
+         */
+	public function postDeleteItem()
+	{
+		if (\Request::ajax())
+		{
+                        try
+                        {
+				$data = \Request::all();
+				
+				$items_id = $data['items_id'];
+				
+				$item = new Item();
+				$deleted_rows = $item->deleteItem($items_id);
+				
+				if($deleted_rows > 0)
+				{
+					return Response::json(array('success' => 1, 'msg' => 'The selected items have been deleted !'));
+				}
+				else
+				{
+					return Response::json(array('success' => 0, 'msg' => 'Error Occurred while deleting items !'));
+				}
+			}
+			catch(\Exception $e)
+                        {
+				return Response::json(array('success' => 0, 'msg' => 'Error Occurred !'));
+			}
+		}
+	}
     
         /**
          * Get item details to display in modal for edit

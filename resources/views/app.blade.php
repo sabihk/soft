@@ -9,6 +9,8 @@
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('/plugins/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/plugins/select2/select2.css') }}" rel="stylesheet">
+	<link href="{{ asset('/plugins/jquery-ui-1.11.2.custom/jquery-ui.css') }}" rel="stylesheet">
+	
 	<link href="{{ asset('/css/items.css') }}" rel="stylesheet">
 
 </head>
@@ -32,6 +34,8 @@
 	<script src="{{ asset('/scripts/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('/plugins/datatables/js/jquery.dataTables.min.js') }}"></script>
 	<script src="{{ asset('/plugins/select2/select2.min.js') }}"></script>
+	<script src="{{ asset('/plugins/jquery-ui-1.11.2.custom/jquery-ui.js') }}"></script>
+	
 	<script>
 		var base = "{{ URL::to('/') }}";
 	</script>

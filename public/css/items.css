@@ -29,7 +29,7 @@ table.table-border {
         box-shadow: 0 0 6px #F8B9B7 !important;
 }
 
-.error-box {
+.error-box, .delete_item {
         display: none;
 }
 
@@ -43,4 +43,8 @@ table.table-border {
 
 .cursor {
         cursor: pointer;
+}
+
+.margin-checkbox {
+        margin-left: 8px !important;
 }

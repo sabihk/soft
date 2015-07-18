@@ -64,6 +64,20 @@ class Item extends Model
         }
         
         /**
+	 * Delete item
+	 *
+	 * @param array $data
+	 * @return int
+	 */
+        public function deleteItem($data)
+        {
+                $deleted_item = Item::whereIn('id', $data)->delete();
+                
+                // Return number of rows deleted
+                return $deleted_item;
+        }
+        
+        /**
 	 * Count duplicate fields
 	 * If check is done while updating data then check except this id
 	 *

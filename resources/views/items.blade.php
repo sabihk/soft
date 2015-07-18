@@ -9,8 +9,10 @@
         </div>
         <div class="row">
                 <div class="col-xs-12">
+			<button class="btn btn-sm btn-danger delete_item"
+				data-token="{{ csrf_token() }}">Delete Item</button>
                         <div class="pull-right padding-bottom15">
-                                <button class="btn btn-sm btn-danger add_item" name="">+ New Item</button>
+                                <button class="btn btn-sm btn-danger add_item">+ New Item</button>
                         </div>
                 </div>
         </div>
@@ -19,8 +21,11 @@
 			<table class="table table-hover table-border" id="items_table">
 				<thead>
 					<tr>
-						<th class="col-xs-3">
+						<th>
 							Id
+						</th>
+						<th class="col-xs-1 cursor">
+							<input type="checkbox" id="select_all_items">
 						</th>
 						<th class="col-xs-3">
 							Name
