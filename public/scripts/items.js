@@ -42,18 +42,38 @@ $(document).ready(function(){
 	
 	var all_selected = [];
 	// (Header checkbox) Check all items to be deleted
-	$('table#items_table thead').on('click', 'tr > th:nth-child(1)', function () {
+	$('table#items_table thead').on('click', 'tr > th:nth-child(1)', '#select_all_items', function (e) {
+		
+		var target = $(e.target);
+		
 		// If header is checked then first empty 'all_selected' array and
 		// Check all individual checkboxes
-		if ($(this).find('input:checkbox').is(':checked')) {
-			$(this).find('input:checkbox').prop('checked', false);
-			$('.items').prop('checked', false);
-			$(".delete_item").css("display", "none");
-		} else {
-			all_selected = [];
-			$(this).find('input:checkbox').prop('checked', true);
-			$('.items').prop('checked', true);
-			$(".delete_item").css("display", "inline");
+		
+		// If target is checkbox then proceed here
+		if(target.is('#select_all_items')) {
+			if ($('#select_all_items').is(':checked')) {
+				all_selected = [];
+				$('.items').prop('checked', true);
+				$(".delete_item").css("display", "inline");
+			} else {
+				$('.items').prop('checked', false);
+				$(".delete_item").css("display", "none");
+			}
+		}
+		
+		// If target is checkbox cell then proceed here
+		if (target.is('tr > th:nth-child(1)')) {
+			// If previously checked
+			if ($(this).find('input:checkbox').is(':checked')) {
+				$(this).find('input:checkbox').prop('checked', false);
+				$('.items').prop('checked', false);
+				$(".delete_item").css("display", "none");
+			} else {
+				all_selected = [];
+				$(this).find('input:checkbox').prop('checked', true);
+				$('.items').prop('checked', true);
+				$(".delete_item").css("display", "inline");
+			}
 		}
 		
 		// Loop through all checked checkbox and store in 'all_selected' array
@@ -70,11 +90,35 @@ $(document).ready(function(){
 	});
 	
 	// (Individual Checkbox) push checked items in an array
-	$('table#items_table tbody').on('click', 'tr > td:nth-child(1)', function () {
-		if ($(this).find('input:checkbox').is(':checked')) {
-			$(this).find('input:checkbox').prop('checked', false);
-		} else {
-			$(this).find('input:checkbox').prop('checked', true);
+	$('table#items_table tbody').on('click', 'tr > td:nth-child(1)', '.items', function (e) {
+		
+		var target = $(e.target);
+		
+		// If target is checkbox then proceed here
+		if(target.is('.items')) {
+			if ($('.items').is(':checked')) {
+				$(this).prop('checked', true);
+			} else {
+				$(this).prop('checked', false);
+			}
+			
+			// Get item id
+			var item_id = items_table.row($(this).closest('tr')).data().id;
+			var is_checked = $(this).parent().find('input:checkbox').is(":checked");
+		}
+		
+		// If target is checkbox cell then proceed here
+		if(target.is('tr > td:nth-child(1)')) {
+			// If previously checked
+			if ($(this).find('input:checkbox').is(':checked')) {
+				$(this).find('input:checkbox').prop('checked', false);
+			} else {
+				$(this).find('input:checkbox').prop('checked', true);
+			}
+			
+			// Get item id
+			var item_id = $(this).find('input').val();
+			var is_checked = $(this).find('input').is(":checked");
 		}
 		
 		var total_length = $('.items').length;
@@ -87,9 +131,6 @@ $(document).ready(function(){
 			$('#select_all_items').prop('checked', false);
 		}
 		
-		// Get item id
-		var item_id = $(this).find('input').val();
-		var is_checked = $(this).find('input').is(":checked");
 		
 		// If checkbox is checked then store item id in 'all_selected' array
 		// If checkbox is unchecked then remove item id from 'all_selected' array

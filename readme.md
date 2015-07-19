@@ -19,7 +19,8 @@ Application Architecture
 
 3) Edit Item    -> Click on the row to edit data, a modal with the item details will be displayed to edit and save.
 
-4) Delete Item  -> Not implemented.
+4) Delete Item  -> Click on the header checkbox or the td which contains checkbox to check/uncheck all checkboxes.
+                    If at least 1 checkbox is checked then 'Delete' button will be displayed.
 
 Code Architecture/Design
 ---------------------------
