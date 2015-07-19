@@ -38,5 +38,6 @@ Code Architecture/Design
     
 3) Plugins used:
     
-    i)  public/plugins/datatables    -> Datatables plugin is used to display items list.
-    ii) public/plugins/select2      -> Select2 plugin is used to display items in tax dropdown.
+    i)  public/plugins/datatables               -> Datatables plugin is used to display items list.
+    ii) public/plugins/select2                  -> Select2 plugin is used to display items in tax dropdown.
+    iii) public/plugins/jquery-ui-1.11.2.custom -> jQuery UI is used to display confirm box before deleting items.
