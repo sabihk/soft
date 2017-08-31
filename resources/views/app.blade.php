@@ -6,12 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Soft</title>
 
-	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-	<link href="{{ asset('/plugins/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
-	<link href="{{ asset('/plugins/select2/select2.css') }}" rel="stylesheet">
-	<link href="{{ asset('/plugins/jquery-ui-1.11.2.custom/jquery-ui.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('/css/app.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('/plugins/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('/plugins/select2/select2.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('/plugins/jquery-ui-1.11.2.custom/jquery-ui.css') }}" rel="stylesheet">
 
-	<link href="{{ asset('/css/items.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('/css/items.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -30,15 +30,15 @@
 	</nav>
 
 	@yield('content')
-	<script src="{{ asset('/scripts/jquery.min.js') }}"></script>
-	<script src="{{ asset('/scripts/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('/plugins/datatables/js/jquery.dataTables.min.js') }}"></script>
-	<script src="{{ asset('/plugins/select2/select2.min.js') }}"></script>
-	<script src="{{ asset('/plugins/jquery-ui-1.11.2.custom/jquery-ui.js') }}"></script>
+	<script src="{{ secure_asset('/scripts/jquery.min.js') }}"></script>
+	<script src="{{ secure_asset('/scripts/bootstrap.min.js') }}"></script>
+	<script src="{{ secure_asset('/plugins/datatables/js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ secure_asset('/plugins/select2/select2.min.js') }}"></script>
+	<script src="{{ secure_asset('/plugins/jquery-ui-1.11.2.custom/jquery-ui.js') }}"></script>
 
 	<script>
 		var base = "{{ URL::to('/') }}";
 	</script>
-	<script src="{{ asset('/scripts/items.js') }}"></script>
+	<script src="{{ secure_asset('/scripts/items.js') }}"></script>
 </body>
 </html>
