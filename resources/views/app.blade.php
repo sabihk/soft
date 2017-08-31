@@ -37,7 +37,7 @@
 	<script src="{{ secure_asset('/plugins/jquery-ui-1.11.2.custom/jquery-ui.js') }}"></script>
 
 	<script>
-		var base = "{{ URL::to('/') }}";
+		var base = "{{ secure_url('/') }}";
 	</script>
 	<script src="{{ secure_asset('/scripts/items.js') }}"></script>
 </body>
